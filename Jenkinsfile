@@ -8,7 +8,7 @@ pipeline {
             }
         }
 
-        stage{'New Stage'} {
+        stage('New Stage') {
             steps {
                 echo 'Hello Stage 2'
                 sh "date"
