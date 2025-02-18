@@ -1,18 +1,10 @@
 pipeline {
-    agent any { label "app-1"}
-
+    agent { label "app-1" } // OR use 'agent any' if you don't need a specific label
+    
     stages {
-        stage ('Hello') {
+        stage("New Stage") { // Corrected stage syntax
             steps {
-                echo 'Hello World 22'
-            }
-        }
-
-        stage {'New Stage'} {
-            steps {
-                echo "Hello Date"
-                sh "date"
-                sh "hostname"
+                echo "This is a corrected Jenkinsfile"
             }
         }
     }
