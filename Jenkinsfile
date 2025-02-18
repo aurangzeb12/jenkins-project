@@ -1,10 +1,18 @@
 pipeline {
-    agent { label "app-1" }
+    agent any { label "app-1"}
 
     stages {
-        stage('New Stage') {
+        stage ('Hello') {
             steps {
-                echo "This is a corrected Jenkinsfile"
+                echo 'Hello World 22'
+            }
+        }
+
+        stage {'New Stage'} {
+            steps {
+                echo "Hello Date"
+                sh "date"
+                sh "hostname"
             }
         }
     }
