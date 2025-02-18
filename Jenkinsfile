@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent any { label "app-1"}
 
     stages {
         stage('Hello') {
@@ -8,10 +8,11 @@ pipeline {
             }
         }
 
-        stage('New Stage') {
+        stage{'New Stage'} {
             steps {
-                echo 'Hello Stage 2'
+                echo "Hello Date"
                 sh "date"
+                sh "hostname"
             }
         }
     }
