@@ -1,10 +1,10 @@
 pipeline {
-    agent { label "app-1" } // OR use 'agent any' if you don't need a specific label
-    
+    agent any  // This will run on any available agent
+
     stages {
-        stage("New Stage") { // Corrected stage syntax
+        stage("New Stage") {
             steps {
-                echo "This is a corrected Jenkinsfile"
+                echo "Running on any available agent"
             }
         }
     }
