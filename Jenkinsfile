@@ -1,17 +1,10 @@
 pipeline {
-    agent any
+    agent any  // This will run on any available agent
 
     stages {
-        stage('Hello') {
+        stage("New Stage") {
             steps {
-                echo 'Hello World 22'
-            }
-        }
-
-        stage('New Stage') {
-            steps {
-                echo 'Hello Stage 2'
-                sh "date"
+                echo "Running on any available agent"
             }
         }
     }
