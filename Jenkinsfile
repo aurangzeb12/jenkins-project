@@ -1,18 +1,9 @@
 pipeline {
-    agent any { label "app-1"}
-
+    agent { label "app-1" } // ✅ Fixed agent syntax
     stages {
-        stage ('Hello') {
+        stage("New Stage") { // ✅ Fixed stage syntax
             steps {
-                echo 'Hello World 22'
-            }
-        }
-
-        stage {'New Stage'} {
-            steps {
-                echo "Hello Date"
-                sh "date"
-                sh "hostname"
+                echo "This is a working pipeline!"
             }
         }
     }
