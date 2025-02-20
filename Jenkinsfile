@@ -4,6 +4,7 @@ pipeline {
         stage("New Stage") { // ✅ Fixed stage syntax
             steps {
                 echo "This is a working pipeline!"
+                echo "This is a working pipeline!"
             }
         }
     }
